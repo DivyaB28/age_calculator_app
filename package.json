@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "npx tailwindcss ./src/tailwind.css -o ./public/dist/styles.css --watch"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  }
+}
