@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/dist/styles.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body class="bg-off_white font-poppins sm:mx-auto sm:flex sm:justify-center">
+    <main
+      class="absolute w-full max-w-140 rounded-t-lg rounded-bl-lg rounded-br-large bg-white px-10 py-5 sm:top-[10%] sm:mx-10 sm:w-[95%] sm:p-5 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+    >
+      <section>
+        <form
+          class="my-5 grid grid-rows-2 items-center sm:grid-cols-3 sm:gap-x-5 md:grid-cols-4"
+          id="form"
+        >
+          <div>
+            <label
+              id="labelDay"
+              class="block text-xs font-semibold uppercase tracking-widest text-smokey_grey"
+              for="day"
+              >Day</label
+            >
+            <input
+              class="max-h-18 mt-2 block w-full max-w-28 appearance-none rounded-md border border-light_grey p-4 text-xl font-bold text-off_black placeholder:font-bold placeholder:text-smokey_grey focus:outline-none focus:ring-1 focus:ring-inset focus:ring-purple max-sm:w-16 sm:text-lg [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              id="day"
+              name="day"
+              type="number"
+              placeholder="DD"
+              min="1"
+              max="31"
+            />
+            <small id="requiredDay" class="hidden"
+              >This field is required</small
+            >
+            <small id="validDay" class="hidden">Must be a valid day</small>
+          </div>
+          <div class="">
+            <label
+              id="labelMonth"
+              class="block text-xs font-semibold uppercase tracking-widest text-smokey_grey"
+              for="month"
+            >
+              Month
+            </label>
+            <input
+              class="max-h-18 text-off_black-800 mt-2 block w-full max-w-28 appearance-none rounded-md border border-light_grey p-4 text-xl font-bold placeholder:font-bold placeholder:text-smokey_grey focus:outline-none focus:ring-1 focus:ring-inset focus:ring-purple max-sm:w-16 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              id="month"
+              name="month"
+              type="number"
+              placeholder="MM"
+              min="1"
+              max="12"
+            />
+            <small id="requiredMonth" class="hidden"
+              >This field is required</small
+            >
+            <small id="validMonth" class="hidden">Must be a valid month</small>
+          </div>
+          <div class="">
+            <label
+              id="labelYear"
+              class="block text-xs font-semibold uppercase tracking-widest text-smokey_grey"
+              for="year"
+              >Year</label
+            >
+            <input
+              class="text-off_black-800 mt-2 block w-full max-w-28 appearance-none rounded-md border border-light_grey p-4 text-xl font-bold placeholder:font-bold placeholder:text-smokey_grey focus:outline-none focus:ring-1 focus:ring-inset focus:ring-purple max-sm:w-16 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              id="year"
+              name="year"
+              type="number"
+              placeholder="YYYY"
+              min="1990"
+            />
+            <small id="requiredYear" class="hidden"
+              >This field is required</small
+            >
+            <small id="validYear" class="hidden">Must be a valid year</small>
+          </div>
+          <div
+            class="col-span-4 row-span-2 border-b border-smokey_grey opacity-25"
+          ></div>
+          <button
+            class="bg-50% absolute top-[8.6rem] col-span-full block h-16 w-16 place-content-end rounded-full bg-purple bg-icon-arrow bg-center bg-no-repeat p-4 text-transparent sm:place-self-center md:place-self-end"
+            id="submit"
+            type="submit"
+          ></button>
+        </form>
+      </section>
+      <section>
+        <p class="mb-2 mt-0 font-bold italic sm:text-5xl md:text-7xl">
+          <span id="outputYear">- -</span>years
+        </p>
+        <p class="mb-2 font-bold italic sm:text-5xl md:text-7xl">
+          <span id="outputMonth">- -</span>months
+        </p>
+        <p class="mb-7 font-bold italic sm:text-5xl md:text-7xl">
+          <span id="outputDay">- -</span>days
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -548,25 +548,25 @@ video {
   position: absolute;
 }
 
-.left-1\/2 {
-  left: 50%;
+.top-\[8\.6rem\] {
+  top: 8.6rem;
 }
 
-.top-1\/2 {
-  top: 50%;
+.col-span-4 {
+  grid-column: span 4 / span 4;
 }
 
 .col-span-full {
   grid-column: 1 / -1;
 }
 
-.col-start-1 {
-  grid-column-start: 1;
+.row-span-2 {
+  grid-row: span 2 / span 2;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-2 {
@@ -577,12 +577,12 @@ video {
   margin-bottom: 1.75rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
+.mt-0 {
+  margin-top: 0px;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -591,6 +591,10 @@ video {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-16 {
@@ -613,37 +617,22 @@ video {
   max-width: 7rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-.gap-x-1 {
-  -moz-column-gap: 0.25rem;
-       column-gap: 0.25rem;
+.place-content-end {
+  place-content: end;
 }
 
-.place-self-end {
-  place-self: end;
+.items-center {
+  align-items: center;
 }
 
 .rounded-full {
@@ -655,12 +644,12 @@ video {
 }
 
 .rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .rounded-bl-lg {
-  border-bottom-left-radius: 0.5rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .rounded-br-large {
@@ -671,18 +660,18 @@ video {
   border-width: 1px;
 }
 
-.border-y {
-  border-top-width: 1px;
+.border-b {
   border-bottom-width: 1px;
-}
-
-.border-solid {
-  border-style: solid;
 }
 
 .border-light_grey {
   --tw-border-opacity: 1;
   border-color: hsl(0 0% 86% / var(--tw-border-opacity));
+}
+
+.border-smokey_grey {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 1% 44% / var(--tw-border-opacity));
 }
 
 .bg-off_white {
@@ -697,11 +686,15 @@ video {
 
 .bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
 }
 
 .bg-icon-arrow {
   background-image: url('/assets/images/icon-arrow.svg');
+}
+
+.bg-50\% {
+  background-size: 50%;
 }
 
 .bg-center {
@@ -721,13 +714,13 @@ video {
   padding-right: 2.5rem;
 }
 
-.font-poppins {
-  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+.font-poppins {
+  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-xl {
@@ -774,8 +767,36 @@ video {
   color: transparent;
 }
 
-.opacity-40 {
-  opacity: 0.4;
+.opacity-25 {
+  opacity: 0.25;
+}
+
+small {
+  position: absolute;
+  margin-top: 0.5rem;
+  font-size: 0.6rem;
+  font-style: italic;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-text-opacity));
+}
+
+label.red {
+  display: block;
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-text-opacity));
+}
+
+input.red {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
+}
+
+small.red {
+  display: block;
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-text-opacity));
 }
 
 .placeholder\:font-bold::-moz-placeholder {
@@ -814,6 +835,100 @@ video {
 .focus\:ring-purple:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: hsl(259 100% 65% / var(--tw-ring-opacity));
+}
+
+@media not all and (min-width: 320px) {
+  .max-sm\:w-16 {
+    width: 4rem;
+  }
+}
+
+@media (min-width: 320px) {
+  .sm\:top-\[10\%\] {
+    top: 10%;
+  }
+
+  .sm\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:w-\[95\%\] {
+    width: 95%;
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+
+  .sm\:place-self-center {
+    place-self: center;
+  }
+
+  .sm\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:left-1\/2 {
+    left: 50%;
+  }
+
+  .md\:top-1\/2 {
+    top: 50%;
+  }
+
+  .md\:-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:-translate-y-1\/2 {
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:place-self-end {
+    place-self: end;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 }
 
 .\[\&\:\:-webkit-inner-spin-button\]\:appearance-none::-webkit-inner-spin-button {
