@@ -758,6 +758,11 @@ video {
   color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
+.text-purple {
+  --tw-text-opacity: 1;
+  color: hsl(259 100% 65% / var(--tw-text-opacity));
+}
+
 .text-smokey_grey {
   --tw-text-opacity: 1;
   color: hsl(0 1% 44% / var(--tw-text-opacity));
@@ -765,11 +770,6 @@ video {
 
 .text-transparent {
   color: transparent;
-}
-
-.text-purple {
-  --tw-text-opacity: 1;
-  color: hsl(259 100% 65% / var(--tw-text-opacity));
 }
 
 .opacity-25 {
