@@ -58,6 +58,32 @@ function reset() {
   validYY.classList.remove("red");
 }
 
+function makeformError() {
+  if (
+    !(inputDay.classList.contains("red") && labelDay.classList.contains("red"))
+  ) {
+    inputDay.classList.toggle("red");
+    labelDay.classList.toggle("red");
+  }
+  if (
+    !(
+      inputMonth.classList.contains("red") &&
+      labelMonth.classList.contains("red")
+    )
+  ) {
+    inputMonth.classList.toggle("red");
+    labelMonth.classList.toggle("red");
+  }
+  if (
+    !(
+      inputYear.classList.contains("red") && labelYear.classList.contains("red")
+    )
+  ) {
+    inputYear.classList.toggle("red");
+    labelYear.classList.toggle("red");
+  }
+}
+
 function calculateOutputAge() {
   const birthDayValue = parseInt(inputDay.value);
   const birthMonthValue = parseInt(inputMonth.value);
@@ -83,6 +109,8 @@ function calculateOutputAge() {
     requiredDay.classList.toggle("red");
     inputDay.classList.toggle("red");
     labelDay.classList.toggle("red");
+    //if any of the field is error then make the form error
+    makeformError();
     hasError = true;
   }
 
@@ -90,6 +118,8 @@ function calculateOutputAge() {
     requiredMonth.classList.toggle("red");
     inputMonth.classList.toggle("red");
     labelMonth.classList.toggle("red");
+    //if any of the field is error then make the form error
+    makeformError();
     hasError = true;
   }
 
@@ -97,9 +127,10 @@ function calculateOutputAge() {
     requiredYear.classList.toggle("red");
     inputYear.classList.toggle("red");
     labelYear.classList.toggle("red");
+    //if any of the field is error then make the form error
+    makeformError();
     hasError = true;
   }
-  console.log(requiredDay, requiredMonth, requiredYear);
 
   //checking for day value within range
   if (birthDayValue > 31 || birthDayValue < 1) {
@@ -112,6 +143,11 @@ function calculateOutputAge() {
     validDD.classList.toggle("red");
     inputDay.classList.toggle("red");
     labelDay.classList.toggle("red");
+
+    inputMonth.classList.toggle("red");
+    labelMonth.classList.toggle("red");
+    inputYear.classList.toggle("red");
+    labelYear.classList.toggle("red");
     hasError = true;
   }
   //checking for month value within range
@@ -129,10 +165,15 @@ function calculateOutputAge() {
     validMM.classList.toggle("red");
     inputMonth.classList.toggle("red");
     labelMonth.classList.toggle("red");
+
+    labelDay.classList.toggle("red");
+    inputDay.classList.toggle("red");
+    inputYear.classList.toggle("red");
+    labelYear.classList.toggle("red");
     hasError = true;
   }
   //checking for year value within current year
-  if (birthYearValue > currentYear || birthYearValue < 1990) {
+  if (birthYearValue > currentYear || birthYearValue < 1980) {
     if (requiredYear.classList.contains("red")) {
       requiredYear.classList.remove("red");
       inputYear.classList.toggle("red");
@@ -141,9 +182,15 @@ function calculateOutputAge() {
     validYY.classList.toggle("red");
     labelYear.classList.toggle("red");
     inputYear.classList.toggle("red");
+
+    labelDay.classList.toggle("red");
+    inputDay.classList.toggle("red");
+    inputMonth.classList.toggle("red");
+    labelMonth.classList.toggle("red");
     hasError = true;
   }
-  if (hasError) return; // if there is a error return
+  if (hasError) return;
+  // if there is a error return
 
   //checking for leap year
   if (
