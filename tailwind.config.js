@@ -47,7 +47,7 @@ module.exports = {
       8: "8px",
     },
     backgroundImage: {
-      "icon-arrow": "url('/assets/images/icon-arrow.svg')",
+      "icon-arrow": "url('assets/images/icon-arrow.svg')",
     },
     extend: {
       fontFamily: {

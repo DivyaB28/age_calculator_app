@@ -23,7 +23,7 @@
   </head>
   <body class="bg-off_white font-poppins sm:mx-auto sm:flex sm:justify-center">
     <main
-      class="absolute w-full max-w-140 rounded-t-lg rounded-bl-lg rounded-br-large bg-white px-10 py-5 sm:top-[10%] sm:mx-10 sm:w-[95%] sm:p-5 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+      class="absolute w-full max-w-140 rounded-t-lg rounded-bl-lg rounded-br-large bg-white sm:top-[10%] sm:mx-10 sm:w-[95%] sm:p-5 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:px-10 md:py-5"
     >
       <section>
         <form
@@ -100,7 +100,12 @@
             class="absolute top-[8.6rem] col-span-full block h-16 w-16 place-content-end rounded-full bg-purple bg-icon-arrow bg-50% bg-center bg-no-repeat p-4 text-transparent hover:cursor-pointer hover:bg-black sm:place-self-center md:place-self-end"
             id="submit"
             type="submit"
-          ></button>
+            aria-label="click to submit"
+            aria-labelledby="labelbutton"
+            role="button"
+          >
+            Submit
+          </button>
         </form>
       </section>
       <section>

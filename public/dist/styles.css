@@ -690,7 +690,7 @@ video {
 }
 
 .bg-icon-arrow {
-  background-image: url('/assets/images/icon-arrow.svg');
+  background-image: url('assets/images/icon-arrow.svg');
 }
 
 .bg-50\% {
@@ -707,16 +707,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .font-poppins {
@@ -937,6 +927,16 @@ small.red {
 
   .md\:place-self-end {
     place-self: end;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
   .md\:text-7xl {
