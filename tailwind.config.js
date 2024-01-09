@@ -46,9 +46,9 @@ module.exports = {
       6: "6px",
       8: "8px",
     },
-    backgroundImage: {
-      "icon-arrow": "url('/age-calculator-app/assets/images/icon-arrow.svg')",
-    },
+    // backgroundImage: {
+    //   "icon-arrow": "url('/assets/images/icon-arrow.svg')",
+    // },
     extend: {
       fontFamily: {
         poppins: ['"Poppins"', ...defaultTheme.fontFamily.sans],

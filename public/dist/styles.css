@@ -689,10 +689,6 @@ video {
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
 }
 
-.bg-icon-arrow {
-  background-image: url('/age-calculator-app/assets/images/icon-arrow.svg');
-}
-
 .bg-50\% {
   background-size: 50%;
 }
